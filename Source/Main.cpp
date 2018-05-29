@@ -7,12 +7,13 @@
 #include"../Include/Useful.h"
 
 int main(){
-	std::cout <<"Biuld Success";
+	std::cout <<"Biuld Success" << std::endl;
 	std::cout << "Program Start!" << std::endl;
 
 	//WON API
 	Wonho_pp::Resource res("../../Resource");
 	Wonho_pp::String_Helper StringHelper;
+	Wonho_pp::Screen_Move ScreenHelper;
 
 	sf::RenderWindow window(sf::VideoMode(800, 800), "PLAY - LAS");
 
@@ -27,7 +28,8 @@ int main(){
 
 	text.setString(L"³ª´Â ³ª");
 	text.setCharacterSize(24);
-
+	ScreenHelper.setMiddle(text);
+	text.setPosition(400, 400);
 	text.setFillColor(sf::Color::White);
 	text.setStyle(sf::Text::Bold);
 
