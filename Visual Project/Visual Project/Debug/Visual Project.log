@@ -1,2 +1,3 @@
 ﻿  Main.cpp
+e:\sfml_mes\source\main.cpp(15): warning C4101: 'StringHelper' :참조되지 않은 지역 변수입니다.
   Visual Project.vcxproj -> E:\SFML_Mes\Visual Project\Debug\Visual Project.exe

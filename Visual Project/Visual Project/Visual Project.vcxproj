@@ -20,6 +20,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\Main.cpp" />
+    <ClCompile Include="..\..\Source\Resource.cpp" />
+    <ClCompile Include="..\..\Source\Useful.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Include\Resource.h" />
+    <ClInclude Include="..\..\Include\Useful.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

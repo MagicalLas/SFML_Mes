@@ -1,5 +1,4 @@
-#include"stdafx.h"
-#include"Resource.h"
+#include"../Include/Resource.h"
 namespace Wonho_pp {
 	Resource::Resource(std::string Root) {
 		ResourceRootPath = Root;

@@ -1,5 +1,4 @@
-#include"stdafx.h"
-#include"Useful.h"
+#include"../Include/Useful.h"
 namespace Wonho_pp {
 	
 	void Screen_Move::setMiddle(sf::Text& text) {
