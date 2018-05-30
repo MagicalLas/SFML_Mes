@@ -15,21 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Source\Main.cpp">
+    <ClCompile Include="..\..\Sources\Main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Resource.cpp">
+    <ClCompile Include="..\..\Sources\Resource.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Useful.cpp">
+    <ClCompile Include="..\..\Sources\Useful.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Include\Useful.h">
+    <ClInclude Include="..\..\Includes\Resource.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Include\Resource.h">
+    <ClInclude Include="..\..\Includes\Useful.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

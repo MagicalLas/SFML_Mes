@@ -1,4 +1,4 @@
-#include"../Include/Resource.h"
+#include"../Includes/Resource.h"
 namespace Wonho_pp {
 	Resource::Resource(std::string Root) {
 		ResourceRootPath = Root;
