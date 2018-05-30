@@ -1,5 +1,7 @@
 #pragma once
 #include"SFML\Graphics.hpp"
+#include"Resource.h"
+#include<iostream>
 #include<string>
 #include<vector>
 namespace Wonho_pp {
@@ -15,6 +17,8 @@ namespace Wonho_pp {
 		void setMiddle(sf::Text& draw);
 		sf::RectangleShape setTile(int x, int y, sf::Color color);
 		void setTileSize(int x, int y, int r);
+
+		
 	};
 	struct String_Helper
 	{

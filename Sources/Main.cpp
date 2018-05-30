@@ -16,7 +16,7 @@ int main() {
 	Wonho_pp::Resource res("../../Resources");
 	Wonho_pp::String_Helper StringHelper;
 	Wonho_pp::Screen_Move ScreenHelper;
-	ScreenHelper.setTileSize(90, 90, 2);
+	ScreenHelper.setTileSize(90,90,2);
 
 	sf::RenderWindow window(sf::VideoMode(800, 800), "PLAY - LAS");
 	//
@@ -30,7 +30,6 @@ int main() {
 		std::cout << "Font can't find\n";
 	}
 	text.setFont(font);
-
 	text.setString(L"클릭하면 시작합니다.");
 	text.setCharacterSize(24);
 	ScreenHelper.setMiddle(text);
