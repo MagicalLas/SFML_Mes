@@ -26,6 +26,8 @@
   <ItemGroup>
     <ClInclude Include="..\..\Include\Resource.h" />
     <ClInclude Include="..\..\Include\Useful.h" />
+    <ClInclude Include="..\..\Library\imgui\imgui-SFML.h" />
+    <ClInclude Include="..\..\Library\imgui\imgui.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

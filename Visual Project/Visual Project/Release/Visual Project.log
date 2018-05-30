@@ -1,0 +1,6 @@
+﻿  Main.cpp
+e:\sfml_mes\source\main.cpp(23): warning C4101: 'StringHelper' :참조되지 않은 지역 변수입니다.
+  Resource.cpp
+  Useful.cpp
+Main.obj : error LNK2001: "void __cdecl ImGui::SFML::Init(class sf::RenderWindow &,bool)" (?Init@SFML@ImGui@@YAXAAVRenderWindow@sf@@_N@Z) 외부 기호를 확인할 수 없습니다.
+E:\SFML_Mes\Visual Project\Release\Visual Project.exe : fatal error LNK1120: 1개의 확인할 수 없는 외부 참조입니다.

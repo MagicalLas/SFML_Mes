@@ -1,12 +1,20 @@
 //STD
 #include<iostream>
 //Other
-#include<SFML/Graphics.hpp>
+#include <SFML/Graphics/RenderWindow.hpp>
+#include <SFML/System/Clock.hpp>
+#include <SFML/Window/Event.hpp>
+#include <SFML/Graphics/CircleShape.hpp>
+#include"../Library/imgui/imgui.h"
+#include"../Library/imgui/imgui-SFML.h"
+
 //Wonho
 #include"../Include/Resource.h"
 #include"../Include/Useful.h"
 
 int main(){
+	
+	
 	std::cout <<"Biuld Success" << std::endl;
 	std::cout << "Program Start!" << std::endl;
 
@@ -15,18 +23,21 @@ int main(){
 	Wonho_pp::String_Helper StringHelper;
 	Wonho_pp::Screen_Move ScreenHelper;
 
-	sf::RenderWindow window(sf::VideoMode(800, 800), "PLAY - LAS");
 
+	sf::RenderWindow window(sf::VideoMode(800, 800), "PLAY - LAS");
+	window.setFramerateLimit(60);
+
+	ImGui::SFML::Init(window);
 	sf::Text text;
 	sf::Font font;
-
+	
 	if (!font.loadFromFile(res.getPath("font.ttf")))
 	{
 		std::cout << "Font can't find\n";
 	}
 	text.setFont(font);
 
-	text.setString(L"³ª´Â ³ª");
+	text.setString(L"Test Text");
 	text.setCharacterSize(24);
 	ScreenHelper.setMiddle(text);
 	text.setPosition(400, 400);
