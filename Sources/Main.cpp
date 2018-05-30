@@ -39,7 +39,7 @@ int main() {
 
 	sf::RectangleShape s1 = ScreenHelper.setTile(1, 1, sf::Color::Green);
 	sf::RectangleShape s11 = ScreenHelper.setTile(2, 1, sf::Color::Green);
-	sf::RectangleShape s12 = ScreenHelper.setTile(3, 1, sf::Color::Green);
+	sf::RectangleShape s12 = ScreenHelper.setTile(3, 4, sf::Color::Green);
 	sf::RectangleShape s2 = ScreenHelper.setTile(1, 2, sf::Color::Green);
 	sf::RectangleShape a = ScreenHelper.setTile(2, 2, sf::Color::Green);
 
