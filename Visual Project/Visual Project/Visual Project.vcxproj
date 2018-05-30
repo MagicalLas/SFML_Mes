@@ -19,6 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Library\Imgui\imgui-SFML.cpp" />
+    <ClCompile Include="..\..\Library\Imgui\imgui.cpp" />
+    <ClCompile Include="..\..\Library\Imgui\imgui_demo.cpp" />
+    <ClCompile Include="..\..\Library\Imgui\imgui_draw.cpp" />
     <ClCompile Include="..\..\Source\Main.cpp" />
     <ClCompile Include="..\..\Source\Resource.cpp" />
     <ClCompile Include="..\..\Source\Useful.cpp" />
@@ -26,8 +30,14 @@
   <ItemGroup>
     <ClInclude Include="..\..\Include\Resource.h" />
     <ClInclude Include="..\..\Include\Useful.h" />
-    <ClInclude Include="..\..\Library\imgui\imgui-SFML.h" />
-    <ClInclude Include="..\..\Library\imgui\imgui.h" />
+    <ClInclude Include="..\..\Library\Imgui\imconfig-SFML.h" />
+    <ClInclude Include="..\..\Library\Imgui\imconfig.h" />
+    <ClInclude Include="..\..\Library\Imgui\imgui-SFML.h" />
+    <ClInclude Include="..\..\Library\Imgui\imgui.h" />
+    <ClInclude Include="..\..\Library\Imgui\imgui_internal.h" />
+    <ClInclude Include="..\..\Library\Imgui\stb_rect_pack.h" />
+    <ClInclude Include="..\..\Library\Imgui\stb_textedit.h" />
+    <ClInclude Include="..\..\Library\Imgui\stb_truetype.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
