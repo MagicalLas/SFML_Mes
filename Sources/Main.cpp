@@ -36,13 +36,12 @@ int main() {
 	text.setPosition(400, 20);
 	text.setFillColor(sf::Color::White);
 	text.setStyle(sf::Text::Bold);
-
-	sf::RectangleShape s1 = ScreenHelper.setTile(1, 1, sf::Color::Green);
-	sf::RectangleShape s11 = ScreenHelper.setTile(2, 1, sf::Color::Green);
-	sf::RectangleShape s12 = ScreenHelper.setTile(3, 4, sf::Color::Green);
-	sf::RectangleShape s2 = ScreenHelper.setTile(1, 2, sf::Color::Green);
-	sf::RectangleShape a = ScreenHelper.setTile(2, 2, sf::Color::Green);
-
+	std::vector<sf::RectangleShape> sq;
+	for (int i = 0; i < 5; i++) {
+		for (int j = 0; j < 5; j++) {
+			sq.push_back(ScreenHelper.setTile(i, j, sf::Color::Green));
+		}
+	}
 	while (window.isOpen())
 	{
 		sf::Event event;
@@ -57,13 +56,10 @@ int main() {
 		}
 			
 		window.clear();
-
+		for (auto i : sq) {
+			window.draw(i);
+		}
 		window.draw(text);
-		window.draw(s1);
-		window.draw(s11);
-		window.draw(s12);
-		window.draw(s2);
-		window.draw(a);
 		window.display();
 	}
 

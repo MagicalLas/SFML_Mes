@@ -1,5 +1,5 @@
 #include"../Includes/Useful.h"
-namespace Wonho_pp {
+namespace Wonho_pp {	
 	Screen_Move::Screen_Move() {
 		
 	}
@@ -12,11 +12,11 @@ namespace Wonho_pp {
 	sf::RectangleShape Screen_Move::setTile(int x, int y, sf::Color color) {
 
 		sf::RectangleShape rectangle;
-		rectangle.setSize(sf::Vector2f(tile_x, tile_y));
+		rectangle.setSize(sf::Vector2f(tile_x - round, tile_y - round));
 		rectangle.setOutlineColor(sf::Color::Yellow);
 		rectangle.setFillColor(sf::Color::Color(2, 65, 23, 100));
 		rectangle.setOutlineThickness(round);
-		rectangle.setPosition(100 + x * (tile_x + round) + x, 200 + y * (tile_y + round) + y);
+		rectangle.setPosition(100 + x * (tile_x) , 200 + y * (tile_y ));
 
 		return rectangle;
 	};
@@ -24,5 +24,10 @@ namespace Wonho_pp {
 		this->tile_x = x;
 		this->tile_y = y;
 		this->round = r;
+	};
+	void Screen_Move::setMapSize(int x, int y, int bolder) {
+		this->map_x = x;
+		this->map_y = y;
+		this->yBolder = bolder;
 	};
 };
