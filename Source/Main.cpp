@@ -42,7 +42,8 @@ int main() {
 			if (event.type == sf::Event::Closed)
 				window.close();
 			if (event.type == sf::Event::MouseButtonPressed) {
-				text.setString(L"아마도...?");
+				text.setString(L"아마도 아닐수도 있지만 상관없다.");
+				ScreenHelper.setMiddle(text);
 			}
 		}
 
