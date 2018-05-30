@@ -5,9 +5,8 @@
 #include <SFML/System/Clock.hpp>
 #include <SFML/Window/Event.hpp>
 #include <SFML/Graphics/CircleShape.hpp>
-#include"../Library/imgui/imgui.h"
-#include"../Library/imgui/imgui-SFML.h"
-
+#include "../Library/Imgui/imgui.h"
+#include "../Library/Imgui/imgui-SFML.h"
 //Wonho
 #include"../Include/Resource.h"
 #include"../Include/Useful.h"
