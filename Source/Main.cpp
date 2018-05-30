@@ -1,8 +1,6 @@
 //STD
 #include<iostream>
 //Other
-#include "../Library/Imgui/imgui-SFML.h"
-#include "../Library/Imgui/imgui.h"
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/System/Clock.hpp>
 #include <SFML/Window/Event.hpp>
@@ -23,7 +21,6 @@ int main(){
 	Wonho_pp::Screen_Move ScreenHelper;
 
 	sf::RenderWindow window(sf::VideoMode(640, 480), "ImGui + SFML = <3");
-	window.setFramerateLimit(60);
 	sf::CircleShape shape(100.f);
 	shape.setFillColor(sf::Color::Green);
 
