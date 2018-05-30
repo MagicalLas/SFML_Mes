@@ -26,7 +26,7 @@ int main() {
 	}
 	text.setFont(font);
 
-	text.setString(L"³ª´Â ³ª");
+	text.setString(L"원호는 바보다");
 	text.setCharacterSize(24);
 	ScreenHelper.setMiddle(text);
 	text.setPosition(400, 400);
@@ -42,6 +42,7 @@ int main() {
 			if (event.type == sf::Event::Closed)
 				window.close();
 			if (event.type == sf::Event::MouseButtonPressed) {
+				text.setString(L"아마도...?");
 			}
 		}
 
