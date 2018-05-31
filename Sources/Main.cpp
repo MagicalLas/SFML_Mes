@@ -17,13 +17,12 @@ int main() {
 	Wonho_pp::String_Helper StringHelper;
 	Wonho_pp::Screen_Move ScreenHelper;
 	ScreenHelper.setTileSize(90,90,2);
+	ScreenHelper.setMapSize(800, 800, 100);
 
 	sf::RenderWindow window(sf::VideoMode(800, 800), "PLAY - LAS");
-	//
+	//	
 	sf::Text text;
 	sf::Font font;
-
-
 
 	if (!font.loadFromFile(res.getPath("font.ttf")))
 	{
@@ -36,12 +35,11 @@ int main() {
 	text.setPosition(400, 20);
 	text.setFillColor(sf::Color::White);
 	text.setStyle(sf::Text::Bold);
+
 	std::vector<sf::RectangleShape> sq;
-	for (int i = 0; i < 5; i++) {
-		for (int j = 0; j < 5; j++) {
-			sq.push_back(ScreenHelper.setTile(i, j, sf::Color::Green));
-		}
-	}
+
+	ScreenHelper.set_MAP(sq);
+
 	while (window.isOpen())
 	{
 		sf::Event event;

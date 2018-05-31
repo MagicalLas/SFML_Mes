@@ -4,6 +4,7 @@
 #include<iostream>
 #include<string>
 #include<vector>
+#include<tuple>
 namespace Wonho_pp {
 	class Screen_Move
 	{
@@ -14,6 +15,7 @@ namespace Wonho_pp {
 		int map_x;
 		int map_y;
 		int yBolder;
+		std::tuple<int, int> PositionFunc(int x, int y);
 	public:
 		Screen_Move();
 		int map[5][5] = {-1,};
@@ -21,7 +23,7 @@ namespace Wonho_pp {
 		sf::RectangleShape setTile(int x, int y, sf::Color color);
 		void setTileSize(int x, int y, int r);
 		void setMapSize(int x, int y, int b);
-		
+		void set_MAP(std::vector<sf::RectangleShape> &vec);
 	};
 	struct String_Helper
 	{
