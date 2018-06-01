@@ -30,8 +30,18 @@ namespace Wonho_pp {
 		rectangle.setPosition(xx , yy);
 
 		return rectangle;
+	}
+	void Screen_Move::setTextPosition(int x, int y, sf::Text & draw, int number)
+	{
+		auto[tileX, tileY] = PositionFunc(x, y);
+		tileX += tile_x / 2;
+		tileY += tile_y / 2;
+		setMiddle(draw);
+		draw.setPosition(tileX, tileY);
 	};
+	void setTextNum(int number, sf::Text & draw) {
 
+	};
 	void Screen_Move::setTileSize(int x, int y, int r = 1) {
 		this->tile_x = x;
 		this->tile_y = y;
