@@ -1,3 +1,11 @@
+/*************************************************************************
+> File Name: Useful.cpp
+> Project Name: 2048 in GSM
+> Author: Wonho Ha aka Las
+> Purpose: Some Usefull functions.
+> Created Time: 2018/05/28
+> Copyright (c) 2018, Wonho Ha aka Las
+*************************************************************************/
 #include"../Includes/Useful.h"
 #include<iostream>
 namespace Wonho_pp {	
