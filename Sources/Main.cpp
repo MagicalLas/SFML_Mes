@@ -33,16 +33,21 @@ int main() {
 	sf::RenderWindow window(sf::VideoMode(800, 800), "PLAY - LAS");
 	//	
 	sf::Text text;
-	sf::Font font;
-
-	if (!font.loadFromFile(res.getPath("font.ttf")))
+	std::vector<sf::Text> map_text;
+	for (size_t i = 0; i < 5; i++)
 	{
-		std::cout << "Font can't find\n";
+		for (size_t j = 0; j  < 5; j++)
+		{
+			sf::Text t;
+			res.setFont("font.ttf", t);
+			ScreenHelper.setTextPosition(i, j, t, 20);
+			map_text.push_back(t);
+		}
 	}
-	text.setFont(font);
+	res.setFont("font.ttf", text);
 	text.setString(L"클릭하면 시작합니다.");
 	text.setCharacterSize(24);
-	ScreenHelper.setTextPosition(2, 1, text, 20);
+	ScreenHelper.setTextPosition(6, 1, text, 20);
 	text.setFillColor(sf::Color::White);
 	text.setStyle(sf::Text::Bold);
 
@@ -65,6 +70,9 @@ int main() {
 			
 		window.clear();
 		for (auto i : sq) {
+			window.draw(i);
+		}
+		for (auto i : map_text) {
 			window.draw(i);
 		}
 		window.draw(text);

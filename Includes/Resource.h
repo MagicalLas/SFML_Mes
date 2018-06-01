@@ -8,11 +8,21 @@
 *************************************************************************/
 #pragma once
 #include<string>
+#include<SFML/Graphics.hpp>
+#include<iostream>
 namespace Wonho_pp {
 	class Resource {
 	public:
 		Resource(std::string Root);
 		std::string getPath(std::string filename);
+		sf::Font font;
+		void setFont(std::string path, sf::Text & text) {
+			if (!font.loadFromFile(getPath(path)))
+			{
+				std::cout << "Font can't find\n";
+			}
+			text.setFont(font);
+		};
 	private:
 		std::string ResourceRootPath;
 	};
