@@ -38,9 +38,13 @@ namespace Wonho_pp {
 		tileY += tile_y / 2;
 		setMiddle(draw);
 		draw.setPosition(tileX, tileY);
-	};
-	void setTextNum(int number, sf::Text & draw) {
 
+		setTextNum(number, draw);
+		setMiddle(draw);
+	}
+	void Screen_Move::setTextNum(int number, sf::Text & draw)
+	{
+		draw.setString("64");
 	};
 	void Screen_Move::setTileSize(int x, int y, int r = 1) {
 		this->tile_x = x;

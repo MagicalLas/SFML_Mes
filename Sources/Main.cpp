@@ -42,8 +42,7 @@ int main() {
 	text.setFont(font);
 	text.setString(L"클릭하면 시작합니다.");
 	text.setCharacterSize(24);
-	ScreenHelper.setMiddle(text);
-	ScreenHelper.setTileText(2, 2, text, 20);
+	ScreenHelper.setTextPosition(2, 1, text, 20);
 	text.setFillColor(sf::Color::White);
 	text.setStyle(sf::Text::Bold);
 
