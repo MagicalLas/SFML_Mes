@@ -33,7 +33,8 @@ namespace Wonho_pp {
 		void setTextNum(int number, sf::Text & draw);
 		void setTileSize(int x, int y, int r);
 		void setMapSize(int x, int y, int b);
-		void set_MAP(std::vector<sf::RectangleShape> &vec);
+		void setMapTile(std::vector<sf::RectangleShape> &vec);
+		void setMapText(std::vector<sf::Text> &vec);
 	};
 	struct String_Helper
 	{

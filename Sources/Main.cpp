@@ -34,6 +34,7 @@ int main() {
 	//	
 	sf::Text text;
 	std::vector<sf::Text> map_text;
+
 	for (size_t i = 0; i < 5; i++)
 	{
 		for (size_t j = 0; j  < 5; j++)
@@ -53,7 +54,7 @@ int main() {
 
 	std::vector<sf::RectangleShape> sq;
 
-	ScreenHelper.set_MAP(sq);
+	ScreenHelper.setMapTile(sq);
 
 	while (window.isOpen())
 	{

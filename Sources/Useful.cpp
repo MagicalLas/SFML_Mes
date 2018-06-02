@@ -57,7 +57,7 @@ namespace Wonho_pp {
 		this->map_y = y;
 		this->yBolder = bolder;
 	};
-	void Screen_Move::set_MAP(std::vector<sf::RectangleShape>& vec)
+	void Screen_Move::setMapTile(std::vector<sf::RectangleShape>& vec)
 	{
 		for (int i = 0; i < 5; i++) {
 			for (int j = 0; j < 5; j++) {
