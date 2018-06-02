@@ -35,16 +35,7 @@ int main() {
 	sf::Text text;
 	std::vector<sf::Text> map_text;
 
-	for (size_t i = 0; i < 5; i++)
-	{
-		for (size_t j = 0; j  < 5; j++)
-		{
-			sf::Text t;
-			res.setFont("font.ttf", t);
-			ScreenHelper.setTextPosition(i, j, t, 20);
-			map_text.push_back(t);
-		}
-	}
+	
 	res.setFont("font.ttf", text);
 	text.setString(L"클릭하면 시작합니다.");
 	text.setCharacterSize(24);
@@ -55,7 +46,19 @@ int main() {
 	std::vector<sf::RectangleShape> sq;
 
 	ScreenHelper.setMapTile(sq);
-
+	ScreenHelper.setMapText(map_text, res);
+	/*
+	for (size_t i = 0; i < 5; i++)
+	{
+		for (size_t j = 0; j < 5; j++)
+		{
+			sf::Text t = *new(sf::Text);
+			res.setFont("font.ttf", t);
+			ScreenHelper.setTextPosition(i, j, t, 1);
+			map_text.push_back(t);
+		}
+	}
+	*/
 	while (window.isOpen())
 	{
 		sf::Event event;

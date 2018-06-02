@@ -9,6 +9,7 @@
 #pragma once
 #include"SFML\Graphics.hpp"
 #include"Resource.h"
+#include"../Includes/Resource.h"
 #include<iostream>
 #include<string>
 #include<vector>
@@ -22,7 +23,8 @@ namespace Wonho_pp {
 		int round;
 		int map_x;
 		int map_y;
-		int yBolder;
+		int yBolder; 
+		sf::Text t;
 		std::tuple<int, int> PositionFunc(int x, int y);
 	public:
 		Screen_Move();
@@ -34,7 +36,7 @@ namespace Wonho_pp {
 		void setTileSize(int x, int y, int r);
 		void setMapSize(int x, int y, int b);
 		void setMapTile(std::vector<sf::RectangleShape> &vec);
-		void setMapText(std::vector<sf::Text> &vec);
+		void setMapText(std::vector<sf::Text> &vec, Wonho_pp::Resource res);
 	};
 	struct String_Helper
 	{

@@ -70,9 +70,18 @@ namespace Wonho_pp {
 		}
 	};
 
-	void Screen_Move::setMapText(std::vector<sf::Text>& vec)
+	void Screen_Move::setMapText(std::vector<sf::Text>& vec, Wonho_pp::Resource res)
 	{
-
+		for (size_t i = 0; i < 5; i++)
+		{
+			for (size_t j = 0; j < 5; j++)
+			{
+				sf::Text * t = new(sf::Text);
+				res.setFont("font.ttf", *t);
+				setTextPosition(i, j, *t, 1);
+				vec.push_back(*t);
+			}
+		}
 	};
 
 	std::tuple<int, int> Screen_Move::PositionFunc(int x, int y) {
