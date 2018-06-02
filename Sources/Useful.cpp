@@ -11,7 +11,7 @@
 namespace Wonho_pp {	
 	Screen_Move::Screen_Move() {
 		
-	}
+	};
 	
 	void Screen_Move::setMiddle(sf::Text& text) {
 		sf::FloatRect textRect = text.getLocalBounds();
@@ -30,7 +30,8 @@ namespace Wonho_pp {
 		rectangle.setPosition(xx , yy);
 
 		return rectangle;
-	}
+	};
+
 	void Screen_Move::setTextPosition(int x, int y, sf::Text & draw, int number)
 	{
 		auto[tileX, tileY] = PositionFunc(x, y);
@@ -41,11 +42,13 @@ namespace Wonho_pp {
 
 		setTextNum(number, draw);
 		setMiddle(draw);
-	}
+	};
+
 	void Screen_Move::setTextNum(int number, sf::Text & draw)
 	{
 		draw.setString("64");
-	}
+	};
+
 	void Screen_Move::setTileSize(int x, int y, int r = 1) {
 		this->tile_x = x;
 		this->tile_y = y;
@@ -57,6 +60,7 @@ namespace Wonho_pp {
 		this->map_y = y;
 		this->yBolder = bolder;
 	};
+
 	void Screen_Move::setMapTile(std::vector<sf::RectangleShape>& vec)
 	{
 		for (int i = 0; i < 5; i++) {
@@ -66,9 +70,14 @@ namespace Wonho_pp {
 		}
 	};
 
+	void Screen_Move::setMapText(std::vector<sf::Text>& vec)
+	{
+
+	};
+
 	std::tuple<int, int> Screen_Move::PositionFunc(int x, int y) {
 		x = (map_x / 2) - (tile_x / 2) - (2 * tile_x) + (x * tile_x);
 		y = (map_y / 2) - (tile_y / 2) - (2 * tile_y) + (y * tile_y) + yBolder;
 		return { x, y };
-	}
+	};
 };
