@@ -44,8 +44,4 @@ namespace Wonho_pp {
 	public:
 		void UpdateMapText(std::vector<sf::Text> &vec);
 	};
-	struct String_Helper
-	{
-		std::wstring Korean(std::string str);
-	};
 };
