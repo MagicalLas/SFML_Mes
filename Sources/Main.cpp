@@ -23,7 +23,7 @@ int main() {
 
 	//WON API
 	Wonho_pp::Resource res("../../Resources");
-	Wonho_pp::String_Helper StringHelper;
+	Wonho_pp::DisplayChange display;
 	Wonho_pp::Screen_Move ScreenHelper;
 	
 	ScreenHelper.setTileSize(90,90,2);
@@ -68,7 +68,7 @@ int main() {
 			if (event.type == sf::Event::KeyPressed) {
 				text.setString(L"2 ^ 11");
 				ScreenHelper.setMiddle(text);
-				ScreenHelper.UpdateMapText(map_text);
+				display.UpdateMapText(map_text);
 			}
 		}
 			
