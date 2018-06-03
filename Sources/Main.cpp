@@ -46,8 +46,8 @@ int main() {
 	std::vector<sf::RectangleShape> sq;
 
 	ScreenHelper.setMapTile(sq);
-	ScreenHelper.setMapText(map_text, res);
-	/*
+	
+	
 	for (size_t i = 0; i < 5; i++)
 	{
 		for (size_t j = 0; j < 5; j++)
@@ -58,7 +58,6 @@ int main() {
 			map_text.push_back(t);
 		}
 	}
-	*/
 	while (window.isOpen())
 	{
 		sf::Event event;
@@ -69,6 +68,7 @@ int main() {
 			if (event.type == sf::Event::MouseButtonPressed) {
 				text.setString(L"2 ^ 11");
 				ScreenHelper.setMiddle(text);
+				ScreenHelper.UpdateMapText(map_text);
 			}
 		}
 			
