@@ -70,16 +70,7 @@ namespace Wonho_pp {
 		}
 	};
 
-	void DisplayChange::UpdateMapText(std::vector<sf::Text>& vec)
-	{
-		for (size_t i = 0; i < 5; i++)
-		{
-			for (size_t j = 0; j < 5; j++)
-			{
-				vec[i * 5 + j].setCharacterSize(10);
-			}
-		}
-	};
+	
 
 	std::tuple<int, int> Screen_Move::PositionFunc(int x, int y) {
 		x = (map_x / 2) - (tile_x / 2) - (2 * tile_x) + (x * tile_x);

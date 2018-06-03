@@ -24,6 +24,9 @@
     <ClCompile Include="..\..\Sources\Useful.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Sources\DisplayChange.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Includes\Resource.h">

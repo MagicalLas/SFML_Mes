@@ -43,5 +43,6 @@ namespace Wonho_pp {
 	private:
 	public:
 		void UpdateMapText(std::vector<sf::Text> &vec);
+		void UpdateMapTile(std::vector<sf::RectangleShape> &vec);
 	};
 };
