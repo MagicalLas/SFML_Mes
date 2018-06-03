@@ -70,7 +70,7 @@ namespace Wonho_pp {
 		}
 	};
 
-	void Screen_Move::setMapText(std::vector<sf::Text>& vec)
+	void Screen_Move::UpdateMapText(std::vector<sf::Text>& vec)
 	{
 		for (size_t i = 0; i < 5; i++)
 		{

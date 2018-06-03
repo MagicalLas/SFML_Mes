@@ -38,6 +38,11 @@ namespace Wonho_pp {
 		void setMapTile(std::vector<sf::RectangleShape> &vec);
 		void UpdateMapText(std::vector<sf::Text> &vec);
 	};
+	class DisplayChange
+	{
+	private:
+	public:
+	};
 	struct String_Helper
 	{
 		std::wstring Korean(std::string str);

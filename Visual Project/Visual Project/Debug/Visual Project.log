@@ -1,9 +1,6 @@
-﻿  Main.cpp
-e:\sfml_mes\sources\main.cpp(26): warning C4101: 'StringHelper' :참조되지 않은 지역 변수입니다.
-  Useful.cpp
+﻿  Useful.cpp
 e:\sfml_mes\sources\useful.cpp(25): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 e:\sfml_mes\sources\useful.cpp(28): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 e:\sfml_mes\sources\useful.cpp(30): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 e:\sfml_mes\sources\useful.cpp(41): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  코드를 생성하고 있습니다...
   Visual Project.vcxproj -> E:\SFML_Mes\Visual Project\Debug\Visual Project.exe
