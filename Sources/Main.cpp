@@ -76,6 +76,7 @@ int main() {
 				else if (event.key.code == sf::Keyboard::Right)
 					std::cout << "RIGHT!\n";
 				display.UpdateMapText(map_text);
+				display.UpdateMapTile(sq);
 			}
 			if (event.type == event.MouseButtonPressed) {
 				text.setString(L"2 ^ 11");
