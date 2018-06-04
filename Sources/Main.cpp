@@ -39,7 +39,8 @@ int main() {
 	res.setFont("font.ttf", text);
 	text.setString(L"클릭하면 시작합니다.");
 	text.setCharacterSize(24);
-	ScreenHelper.setTextPosition(6, 1, text, 20);
+	ScreenHelper.setMiddle(text);
+	text.setPosition(400, 200);
 	text.setFillColor(sf::Color::White);
 	text.setStyle(sf::Text::Bold);
 
@@ -66,9 +67,19 @@ int main() {
 			if (event.type == sf::Event::Closed)
 				window.close();
 			if (event.type == sf::Event::KeyPressed) {
+				if (event.key.code == sf::Keyboard::Up)
+					std::cout << "UP!\n";
+				else if (event.key.code == sf::Keyboard::Down)
+					std::cout << "DOWN!\n";
+				else if (event.key.code == sf::Keyboard::Left)
+					std::cout << "LEFT!\n";
+				else if (event.key.code == sf::Keyboard::Right)
+					std::cout << "RIGHT!\n";
+				display.UpdateMapText(map_text);
+			}
+			if (event.type == event.MouseButtonPressed) {
 				text.setString(L"2 ^ 11");
 				ScreenHelper.setMiddle(text);
-				display.UpdateMapText(map_text);
 			}
 		}
 			
