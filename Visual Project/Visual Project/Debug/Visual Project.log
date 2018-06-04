@@ -1,6 +1,5 @@
 ﻿  DisplayChange.cpp
   Main.cpp
-  Resource.cpp
   Useful.cpp
 e:\sfml_mes\sources\useful.cpp(25): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 e:\sfml_mes\sources\useful.cpp(28): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.

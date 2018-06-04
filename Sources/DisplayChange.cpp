@@ -1,12 +1,12 @@
 #include"../Includes/Useful.h"
-
 [[noreturn]]void Wonho_pp::DisplayChange::UpdateMapText(std::vector<sf::Text>& vec)
 {
 	for (size_t i = 0; i < 5; i++)
 	{
 		for (size_t j = 0; j < 5; j++)
 		{
-			vec[i * 5 + j].setCharacterSize(10);
+			setTextNum(45, vec[i * 5 + j]);
+			SM.setMiddle(vec[i * 5 + j]);
 		}
 	}
 }
@@ -29,3 +29,8 @@
 		}
 	}
 }
+void Wonho_pp::DisplayChange::setTextNum(int number, sf::Text & draw)
+{
+	auto s = std::to_string(number);
+	draw.setString(s);
+};

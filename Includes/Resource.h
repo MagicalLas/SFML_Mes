@@ -27,4 +27,10 @@ namespace Wonho_pp {
 	private:
 		std::string ResourceRootPath;
 	};
+	class ColorControl {
+	public:
+		void setColor(sf::Drawable * object) {
+			
+		};
+	};
 };
