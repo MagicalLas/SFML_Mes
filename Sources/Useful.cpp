@@ -46,6 +46,7 @@ namespace Wonho_pp {
 
 	void Screen_Move::setTextNum(int number, sf::Text & draw)
 	{
+
 		draw.setString("64");
 	};
 

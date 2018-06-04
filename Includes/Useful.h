@@ -28,7 +28,6 @@ namespace Wonho_pp {
 		std::tuple<int, int> PositionFunc(int x, int y);
 	public:
 		Screen_Move();
-		int map[5][5] = {-1,};
 		void setMiddle(sf::Text& draw);
 		sf::RectangleShape setTile(int x, int y, sf::Color color);
 		void setTextPosition(int x, int y, sf::Text& draw, int number);
@@ -41,6 +40,7 @@ namespace Wonho_pp {
 	class DisplayChange
 	{
 	private:
+		std::vector<int> map;
 	public:
 		void UpdateMapText(std::vector<sf::Text> &vec);
 		void UpdateMapTile(std::vector<sf::RectangleShape> &vec);

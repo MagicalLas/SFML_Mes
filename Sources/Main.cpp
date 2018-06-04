@@ -44,9 +44,9 @@ int main() {
 	text.setFillColor(sf::Color::White);
 	text.setStyle(sf::Text::Bold);
 
-	std::vector<sf::RectangleShape> sq;
+	std::vector<sf::RectangleShape> map_tile;
 
-	ScreenHelper.setMapTile(sq);
+	ScreenHelper.setMapTile(map_tile);
 	
 	
 	for (size_t i = 0; i < 5; i++)
@@ -59,6 +59,7 @@ int main() {
 			map_text.push_back(t);
 		}
 	}
+
 	while (window.isOpen())
 	{
 		sf::Event event;
@@ -76,7 +77,7 @@ int main() {
 				else if (event.key.code == sf::Keyboard::Right)
 					std::cout << "RIGHT!\n";
 				display.UpdateMapText(map_text);
-				display.UpdateMapTile(sq);
+				display.UpdateMapTile(map_tile);
 			}
 			if (event.type == event.MouseButtonPressed) {
 				text.setString(L"2 ^ 11");
@@ -85,7 +86,7 @@ int main() {
 		}
 			
 		window.clear();
-		for (auto i : sq) {
+		for (auto i : map_tile) {
 			window.draw(i);
 		}
 		for (auto i : map_text) {
