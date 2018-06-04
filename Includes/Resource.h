@@ -29,8 +29,8 @@ namespace Wonho_pp {
 	};
 	class ColorControl {
 	public:
-		void setColor(sf::Drawable * object) {
-			
-		};
+		void setRecColor(sf::RectangleShape draw, int num) {
+			draw.setFillColor(sf::Color::Color(2, 65, 23, 100));
+		}
 	};
 };

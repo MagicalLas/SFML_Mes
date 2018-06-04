@@ -25,6 +25,9 @@ int main() {
 	Wonho_pp::Resource res("../../Resources");
 	Wonho_pp::DisplayChange display;
 	Wonho_pp::Screen_Move ScreenHelper;
+
+	//Jeungbin
+
 	
 	ScreenHelper.setTileSize(90,90,2);
 	ScreenHelper.setMapSize(800, 800, 100);

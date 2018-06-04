@@ -21,6 +21,8 @@
   <ItemGroup>
     <ClCompile Include="..\..\Sources\DisplayChange.cpp" />
     <ClCompile Include="..\..\Sources\Main.cpp" />
+    <ClCompile Include="..\..\Sources\Map.cpp" />
+    <ClCompile Include="..\..\Sources\MapController.cpp" />
     <ClCompile Include="..\..\Sources\Resource.cpp" />
     <ClCompile Include="..\..\Sources\Useful.cpp" />
   </ItemGroup>
