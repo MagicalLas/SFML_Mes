@@ -27,10 +27,4 @@ namespace Wonho_pp {
 	private:
 		std::string ResourceRootPath;
 	};
-	class ColorControl {
-	public:
-		void setRecColor(sf::RectangleShape draw, int num) {
-			draw.setFillColor(sf::Color::Color(2, 65, 23, 100));
-		}
-	};
 };

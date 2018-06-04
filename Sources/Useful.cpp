@@ -61,7 +61,7 @@ namespace Wonho_pp {
 	{
 		for (int i = 0; i < 5; i++) {
 			for (int j = 0; j < 5; j++) {
-				vec.push_back(setTile(i, j, sf::Color::Green));
+				vec.push_back(setTile(j, i, sf::Color::Green));
 			}
 		}
 	};

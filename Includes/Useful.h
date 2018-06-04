@@ -9,6 +9,7 @@
 #pragma once
 #include"SFML\Graphics.hpp"
 #include"Resource.h"
+#include"Map.h"
 #include"../Includes/Resource.h"
 #include<iostream>
 #include<string>
@@ -43,8 +44,52 @@ namespace Wonho_pp {
 		void setTextNum(int number, sf::Text & draw);
 		Screen_Move SM;
 	public:
-		[[noreturn]]void UpdateMap(int map[5][5]);
+		[[noreturn]]void UpdateMap(Map map);
 		[[noreturn]]void UpdateMapText(std::vector<sf::Text> &vec);
 		[[noreturn]]void UpdateMapTile(std::vector<sf::RectangleShape> &vec);
+		void setRecColor(sf::RectangleShape& draw, int num) {
+			switch (num)
+			{
+			case 0:
+				draw.setFillColor(sf::Color::Color(2, 65, 23, 00));
+				break;
+			case 2:
+				draw.setFillColor(sf::Color::Color(2, 65, 40, 255));
+				break;
+			case 4:
+				draw.setFillColor(sf::Color::Color(255, 65, 23, 255));
+				break;
+			case 8:
+				draw.setFillColor(sf::Color::Color(2, 65, 255, 255));
+				break;
+			case 16:
+				draw.setFillColor(sf::Color::Color(255, 205, 23, 255));
+				break;
+			case 32:
+				draw.setFillColor(sf::Color::Color(2, 65, 23, 255));
+				break;
+			case 64:
+				draw.setFillColor(sf::Color::Color(2, 65, 23, 255));
+				break;
+			case 128:
+				draw.setFillColor(sf::Color::Color(2, 65, 23, 255));
+				break;
+			case 256:
+				draw.setFillColor(sf::Color::Color(2, 65, 23, 255));
+				break;
+			case 512:
+				draw.setFillColor(sf::Color::Color(2, 65, 23, 255));
+				break;
+			case 1024:
+				draw.setFillColor(sf::Color::Color(2, 65, 23, 255));
+				break;
+			case 2048:
+				draw.setFillColor(sf::Color::Color(2, 65, 23, 255));
+				break;
+			default:
+				break;
+			}
+
+		}
 	};
 };

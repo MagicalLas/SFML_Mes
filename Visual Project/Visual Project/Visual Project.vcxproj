@@ -22,14 +22,15 @@
     <ClCompile Include="..\..\Sources\DisplayChange.cpp" />
     <ClCompile Include="..\..\Sources\Main.cpp" />
     <ClCompile Include="..\..\Sources\Map.cpp" />
-    <ClCompile Include="..\..\Sources\MapController.cpp" />
+    <ClCompile Include="..\..\Sources\MapControl.cpp" />
     <ClCompile Include="..\..\Sources\Resource.cpp" />
     <ClCompile Include="..\..\Sources\Useful.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Includes\2048Define.h" />
+    <ClInclude Include="..\..\Includes\Define.h" />
     <ClInclude Include="..\..\Includes\Map.h" />
-    <ClInclude Include="..\..\Includes\MapController.h" />
+    <ClInclude Include="..\..\Includes\MapControl.h" />
     <ClInclude Include="..\..\Includes\Resource.h" />
     <ClInclude Include="..\..\Includes\Useful.h" />
   </ItemGroup>

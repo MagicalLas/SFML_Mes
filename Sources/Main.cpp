@@ -18,7 +18,7 @@
 #include"../Includes/Useful.h"
 //정빈
 #include"../Includes/Map.h"
-#include"../Includes/MapController.h"
+#include"../Includes/MapControl.h"
 #include"../Includes/2048Define.h"
 int main() {
 	std::cout << "Success" << std::endl;
@@ -30,7 +30,8 @@ int main() {
 	Wonho_pp::Screen_Move ScreenHelper;
 
 	//Jeungbin
-	MapControl MapController;
+	Map map;
+	MapControl MapController(&map);
 	
 	ScreenHelper.setTileSize(90,90,2);
 	ScreenHelper.setMapSize(800, 800, 100);
@@ -65,7 +66,8 @@ int main() {
 			map_text.push_back(t);
 		}
 	}
-
+	map[2][3] = 16;
+	display.UpdateMap(map);
 	while (window.isOpen())
 	{
 		sf::Event event;
@@ -82,8 +84,11 @@ int main() {
 					MapController.LeftKey();
 				else if (event.key.code == sf::Keyboard::Right)
 					MapController.RightKey();
-				
-				//display.UpdateMap();
+				//MapController.CreateBlock();
+				//bool isPull = 
+				//if (isPull)
+					//break;
+				display.UpdateMap(map);
 				display.UpdateMapText(map_text);
 				display.UpdateMapTile(map_tile);
 			}
