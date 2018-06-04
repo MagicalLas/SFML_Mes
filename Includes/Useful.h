@@ -30,7 +30,7 @@ namespace Wonho_pp {
 		Screen_Move();
 		void setMiddle(sf::Text& draw);
 		sf::RectangleShape setTile(int x, int y, sf::Color color);
-		void setTextPosition(int x, int y, sf::Text& draw, int number);
+		void setTextPosition(int x, int y, sf::Text& draw);
 		void setTileSize(int x, int y, int r);
 		void setMapSize(int x, int y, int b);
 		void setMapTile(std::vector<sf::RectangleShape> &vec);

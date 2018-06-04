@@ -55,7 +55,7 @@ int main() {
 		{
 			sf::Text t = *new(sf::Text);
 			res.setFont("font.ttf", t);
-			ScreenHelper.setTextPosition(i, j, t, 1);
+			ScreenHelper.setTextPosition(j, i, t);
 			map_text.push_back(t);
 		}
 	}

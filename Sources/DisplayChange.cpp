@@ -1,12 +1,20 @@
+/*************************************************************************
+> File Name: DisplayChange.cpp
+> Project Name: 2048 in GSM
+> Author: Wonho Ha aka Las
+> Purpose: Display Update with Map
+> Created Time: 2018/06/04
+> Copyright (c) 2018, Wonho Ha aka Las
+*************************************************************************/
 #include"../Includes/Useful.h"
 [[noreturn]]void Wonho_pp::DisplayChange::UpdateMapText(std::vector<sf::Text>& vec)
 {
-	for (size_t i = 0; i < 5; i++)
+	for (size_t y = 0; y < 5; y++)
 	{
-		for (size_t j = 0; j < 5; j++)
+		for (size_t x = 0; x < 5; x++)
 		{
-			setTextNum(45, vec[i * 5 + j]);
-			SM.setMiddle(vec[i * 5 + j]);
+			setTextNum(y + 10*x, vec[y * 5 + x]);
+			SM.setMiddle(vec[y * 5 + x]);
 		}
 	}
 }
@@ -31,6 +39,8 @@
 }
 void Wonho_pp::DisplayChange::setTextNum(int number, sf::Text & draw)
 {
-	auto s = std::to_string(number);
+	std::string s = "";
+	if (number != 0)
+		s = std::to_string(number);
 	draw.setString(s);
 };
