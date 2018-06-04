@@ -76,6 +76,8 @@ int main() {
 					std::cout << "LEFT!\n";
 				else if (event.key.code == sf::Keyboard::Right)
 					std::cout << "RIGHT!\n";
+				
+				//display.UpdateMap();
 				display.UpdateMapText(map_text);
 				display.UpdateMapTile(map_tile);
 			}

@@ -16,6 +16,7 @@ namespace Wonho_pp {
 		Resource(std::string Root);
 		std::string getPath(std::string filename);
 		sf::Font font;
+		[[noreturn]]
 		void setFont(std::string path, sf::Text & text) {
 			if (!font.loadFromFile(getPath(path)))
 			{
