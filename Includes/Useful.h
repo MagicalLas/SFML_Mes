@@ -66,25 +66,25 @@ namespace Wonho_pp {
 				draw.setFillColor(sf::Color::Color(255, 205, 23, 255));
 				break;
 			case 32:
-				draw.setFillColor(sf::Color::Color(2, 65, 23, 255));
+				draw.setFillColor(sf::Color::Color(52, 65, 103, 255));
 				break;
 			case 64:
-				draw.setFillColor(sf::Color::Color(2, 65, 23, 255));
+				draw.setFillColor(sf::Color::Color(200, 105, 23, 255));
 				break;
 			case 128:
-				draw.setFillColor(sf::Color::Color(2, 65, 23, 255));
+				draw.setFillColor(sf::Color::Color(120, 25, 103, 155));
 				break;
 			case 256:
-				draw.setFillColor(sf::Color::Color(2, 65, 23, 255));
+				draw.setFillColor(sf::Color::Color(120, 125, 123, 255));
 				break;
 			case 512:
-				draw.setFillColor(sf::Color::Color(2, 65, 23, 255));
+				draw.setFillColor(sf::Color::Color(212, 65, 235, 155));
 				break;
 			case 1024:
-				draw.setFillColor(sf::Color::Color(2, 65, 23, 255));
+				draw.setFillColor(sf::Color::Color(255, 255, 253, 155));
 				break;
 			case 2048:
-				draw.setFillColor(sf::Color::Color(2, 65, 23, 255));
+				draw.setFillColor(sf::Color::Color(255, 255, 253, 255));
 				break;
 			default:
 				break;

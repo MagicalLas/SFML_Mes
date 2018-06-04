@@ -66,7 +66,6 @@ int main() {
 			map_text.push_back(t);
 		}
 	}
-	map[2][3] = 16;
 	display.UpdateMap(map);
 	while (window.isOpen())
 	{
@@ -84,7 +83,7 @@ int main() {
 					MapController.LeftKey();
 				else if (event.key.code == sf::Keyboard::Right)
 					MapController.RightKey();
-				//MapController.CreateBlock();
+				MapController.CreateBlock();
 				//bool isPull = 
 				//if (isPull)
 					//break;
