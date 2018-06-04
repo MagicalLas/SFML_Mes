@@ -36,7 +36,7 @@ int MapControl::AddBlock(int * BlockLine, int Count, int Direction)
 				{
 					int Temp = BlockLine[i];
 					BlockLine[i] = 0;
-					BlockLine[Input_place++] = BlockLine[i];
+					BlockLine[Input_place++] = Temp;
 				}
 			}
 		}
