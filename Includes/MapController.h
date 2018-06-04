@@ -1,8 +1,8 @@
 /*************************************************************************
-> File Name: DisplayChange.cpp
+> File Name: MapController.h
 > Project Name: 2048 in GSM
-> Author: ¿Ã¡§∫Û
-> Purpose: Display Update with Map
+> Author: ¿Ã¡§∫Û, Wonho aka Las
+> Purpose: Controll Map in Object for Object definition of Implimentation
 > Created Time: 2018/06/04
 > Copyright (c) 2018, ¿Ã¡§∫Û
 *************************************************************************/

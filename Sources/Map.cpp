@@ -1,8 +1,8 @@
 /*************************************************************************
-> File Name: DisplayChange.cpp
+> File Name: Map.cpp
 > Project Name: 2048 in GSM
 > Author: ¿Ã¡§∫Û
-> Purpose: Display Update with Map
+> Purpose: Definition of Map in Game
 > Created Time: 2018/06/04
 > Copyright (c) 2018, ¿Ã¡§∫Û
 *************************************************************************/
