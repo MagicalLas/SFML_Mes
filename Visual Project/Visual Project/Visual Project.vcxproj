@@ -27,6 +27,9 @@
     <ClCompile Include="..\..\Sources\Useful.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Includes\2048Define.h" />
+    <ClInclude Include="..\..\Includes\Map.h" />
+    <ClInclude Include="..\..\Includes\MapController.h" />
     <ClInclude Include="..\..\Includes\Resource.h" />
     <ClInclude Include="..\..\Includes\Useful.h" />
   </ItemGroup>

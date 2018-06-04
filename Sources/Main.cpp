@@ -16,7 +16,10 @@
 //Wonho
 #include"../Includes/Resource.h"
 #include"../Includes/Useful.h"
-
+//정빈
+#include"../Includes/Map.h"
+#include"../Includes/MapController.h"
+#include"../Includes/2048Define.h"
 int main() {
 	std::cout << "Success" << std::endl;
 	std::cout << "Program Start!" << std::endl;
@@ -27,7 +30,7 @@ int main() {
 	Wonho_pp::Screen_Move ScreenHelper;
 
 	//Jeungbin
-
+	MapControl MapController;
 	
 	ScreenHelper.setTileSize(90,90,2);
 	ScreenHelper.setMapSize(800, 800, 100);
@@ -72,13 +75,13 @@ int main() {
 				window.close();
 			if (event.type == sf::Event::KeyPressed) {
 				if (event.key.code == sf::Keyboard::Up)
-					std::cout << "UP!\n";
+					MapController.UpKey();
 				else if (event.key.code == sf::Keyboard::Down)
-					std::cout << "DOWN!\n";
+					MapController.DownKey();
 				else if (event.key.code == sf::Keyboard::Left)
-					std::cout << "LEFT!\n";
+					MapController.LeftKey();
 				else if (event.key.code == sf::Keyboard::Right)
-					std::cout << "RIGHT!\n";
+					MapController.RightKey();
 				
 				//display.UpdateMap();
 				display.UpdateMapText(map_text);
