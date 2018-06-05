@@ -19,7 +19,7 @@
 //정빈
 #include"../Includes/Map.h"
 #include"../Includes/MapControl.h"
-#include"../Includes/2048Define.h"
+#include"../Includes/Define.h"
 int main() {
 	std::cout << "Success" << std::endl;
 	std::cout << "Program Start!" << std::endl;
@@ -75,14 +75,16 @@ int main() {
 			if (event.type == sf::Event::Closed)
 				window.close();
 			if (event.type == sf::Event::KeyPressed) {
+				
 				if (event.key.code == sf::Keyboard::Up)
-					MapController.UpKey();
+					MapController.PushKey(UpKey);
 				else if (event.key.code == sf::Keyboard::Down)
-					MapController.DownKey();
+					MapController.PushKey(DownKey);
 				else if (event.key.code == sf::Keyboard::Left)
-					MapController.LeftKey();
+					MapController.PushKey(LeftKey);
 				else if (event.key.code == sf::Keyboard::Right)
-					MapController.RightKey();
+					MapController.PushKey(RightKey);
+					
 				MapController.CreateBlock();
 				//bool isPull = 
 				//if (isPull)

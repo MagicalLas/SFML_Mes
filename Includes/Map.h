@@ -5,16 +5,20 @@ class Map
 {
 private:
 	int Blank;
-	int MapArray[Vertical][Horizontal];
-
+	int MapArray[VerticalMax][HorizontalMax];
+	
 public:
 	Map()
 	{
-		Blank = Vertical * Horizontal;
-		for (int i = 0; i < Vertical; i++)
-			for (int j = 0; j < Horizontal; j++)
+		Blank = VerticalMax * HorizontalMax;
+		for (int i = 0; i < VerticalMax; i++)
+			for (int j = 0; j < HorizontalMax; j++)
 				MapArray[i][j] = 0;
 	}
+	bool IsFull();
+	bool CheckEndGame();
+	int ReturnBlank();
+	bool AddBlank(int Num);
 	int* operator[](int idx);
 	void ShowMap();
 };

@@ -1,5 +1,5 @@
 #pragma once
-#include "../Includes/Map.h"
+#include "Map.h"
 
 class MapControl
 {
@@ -7,17 +7,15 @@ class MapControl
 private:
 	#define PTR (*ptr1)
 	Map *ptr1;
-	int AddBlock(int* BlockLine, int Count, int Direction = 1);
+	bool AddBlock(int* BlockLine, int Count, int Direction);
 
 public:
+
 	MapControl() :ptr1(nullptr) { }
 	MapControl(Map *temp) : ptr1(temp) { }
 
-	void InputMap(Map* NewMap);
+	bool PushKey(int Key);
 	void CreateBlock();
-	void LeftKey();
-	void RightKey();
-	void UpKey();
-	void DownKey();
+	void InputMap(Map* NewMap);
 
 };
