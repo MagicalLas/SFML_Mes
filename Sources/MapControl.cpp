@@ -1,3 +1,11 @@
+/*************************************************************************
+> File Name: MapControl.cpp
+> Project Name: 2048 in GSM
+> Author: ¿Ã¡§∫Û ,Wonho Ha aka Las
+> Purpose: Map Controller for Game Play
+> Created Time: 2018/05/29
+> Copyright (c) 2018, ¿Ã¡§∫Û
+*************************************************************************/
 #include "../Includes/MapControl.h"
 #include "../Includes/Define.h"
 #include <iostream>

@@ -1,3 +1,11 @@
+/*************************************************************************
+> File Name: Map.h
+> Project Name: 2048 in GSM
+> Author: ¿Ã¡§∫Û ,Wonho Ha aka Las
+> Purpose: Main Map structure detinition
+> Created Time: 2018/06/02
+> Copyright (c) 2018, ¿Ã¡§∫Û
+*************************************************************************/
 #pragma once
 #include "Define.h"
 
