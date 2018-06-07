@@ -34,6 +34,6 @@
     - Map Design
     - Map Controller
 - 정현동
-    -Nothing
+    - Nothing
 ## Licence
 - MIT
