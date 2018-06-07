@@ -11,8 +11,6 @@
 #include<iostream>
 //Other
 #include<SFML/Graphics.hpp>
-#include"../../../Libraries/imgui/imgui.h"
-#include"../../../Libraries/imgui/imgui-SFML.h"
 //Wonho
 #include"../Includes/Resource.h"
 #include"../Includes/Useful.h"
