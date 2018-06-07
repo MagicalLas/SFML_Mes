@@ -84,9 +84,6 @@ int main() {
 					MapController.PushKey(RightKey);
 					
 				MapController.CreateBlock();
-				//bool isPull = 
-				//if (isPull)
-					//break;
 				display.UpdateMap(map);
 				display.UpdateMapText(map_text);
 				display.UpdateMapTile(map_tile);
