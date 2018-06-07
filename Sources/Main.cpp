@@ -77,7 +77,7 @@ int main() {
 			if (event.type == sf::Event::KeyPressed) {
 				
 				if (event.key.code == sf::Keyboard::Up)
-					MapController.PushKey(UpKey);
+					MapController.PushKey(UpKey);	
 				else if (event.key.code == sf::Keyboard::Down)
 					MapController.PushKey(DownKey);
 				else if (event.key.code == sf::Keyboard::Left)

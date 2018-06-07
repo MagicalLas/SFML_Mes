@@ -1,3 +1,2 @@
-﻿  MapControl.cpp
-e:\sfml_mes\sources\mapcontrol.cpp(79): warning C4715: 'MapControl::AddBlock': 모든 제어 경로에서 값을 반환하지는 않습니다.
+﻿  Main.cpp
   Visual Project.vcxproj -> E:\SFML_Mes\Visual Project\Debug\Visual Project.exe
