@@ -69,7 +69,7 @@ namespace Wonho_pp {
 	
 
 	std::tuple<int, int> Screen_Move::PositionFunc(int x, int y) {
-		x = (map_x / 2) + (MapSize % 2)*(-(tile_x / 2)) - (2 * tile_x) + (x * tile_x);
+		x = (map_x / 2) + (MapSize % 2)*(-(tile_x / 2)) - (MapSize / 2 * tile_x) + (x * tile_x);
 		y = (map_y / 2) + (MapSize % 2)*(-(tile_y / 2)) - (2 * tile_y) + (y * tile_y) + yBolder;
 		return { x, y };
 	};

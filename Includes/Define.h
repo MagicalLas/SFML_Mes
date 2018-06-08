@@ -13,7 +13,7 @@
 #define LeftKey  (Vertical * 1)
 #define RightKey (Vertical * -1)
 
-#define EndNumber 4096
+#define EndNumber 2048
 
 #define PlayerWin 3
 #define PlayerLose 4

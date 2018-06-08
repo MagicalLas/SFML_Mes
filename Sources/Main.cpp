@@ -30,7 +30,8 @@ int main() {
 	//Jeungbin
 	Map map;
 	MapControl MapController(&map);
-	
+	MapController.CreateBlock();
+
 	ScreenHelper.setTileSize(90,90,2);
 	ScreenHelper.setMapSize(800, 800, 100);
 	
@@ -69,27 +70,47 @@ int main() {
 		sf::Event event;
 		while (window.pollEvent(event))
 		{
+			bool MoveCheck = true;
+
 			if (event.type == sf::Event::Closed)
 				window.close();
 			if (event.type == sf::Event::KeyPressed) {
+
+				switch (event.key.code)
+				{
+				case sf::Keyboard::Up:
+					MoveCheck = MapController.PushKey(UpKey);
+					if (MoveCheck) MapController.CreateBlock();
+					break;
+				case sf::Keyboard::Down:
+					MoveCheck = MapController.PushKey(DownKey);
+					if (MoveCheck) MapController.CreateBlock();
+					break;
+				case sf::Keyboard::Left:
+					MoveCheck = MapController.PushKey(LeftKey);
+					if (MoveCheck) MapController.CreateBlock();
+					break;
+				case sf::Keyboard::Right:
+					MoveCheck = MapController.PushKey(RightKey);
+					if (MoveCheck) MapController.CreateBlock();
+					break;
+				default:
+					break;
+				}
 				
-				if (event.key.code == sf::Keyboard::Up)
-					MapController.PushKey(UpKey);	
-				else if (event.key.code == sf::Keyboard::Down)
-					MapController.PushKey(DownKey);
-				else if (event.key.code == sf::Keyboard::Left)
-					MapController.PushKey(LeftKey);
-				else if (event.key.code == sf::Keyboard::Right)
-					MapController.PushKey(RightKey);
-					
-				MapController.CreateBlock();
-				map.CheckEndGame();
 				display.UpdateMap(map);
 				display.UpdateMapText(map_text);
 				display.UpdateMapTile(map_tile);
 			}
 			if (event.type == event.MouseButtonPressed) {
 				text.setString(L"2 ^ 11");
+				ScreenHelper.setMiddle(text);
+			}
+			if (!MoveCheck) {
+				if(map.ReturnState()==PlayerLose)
+					text.setString(L"패배했습니다.");
+				if (map.ReturnState() == PlayerWin)
+					text.setString(L"승리했습니다.");
 				ScreenHelper.setMiddle(text);
 			}
 		}

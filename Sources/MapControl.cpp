@@ -160,7 +160,8 @@ bool MapControl::PushKey(int Key)
 		}
 
 		AddBlock(BlockLine, BlockLineMax, Direction);
-		MoveCheck = MoveChecking(BeforeBlock, BlockLine, BlockLineMax);
+		if(MoveCheck == false)MoveCheck = MoveChecking(BeforeBlock, BlockLine, BlockLineMax);
+		else MoveChecking(BeforeBlock, BlockLine, BlockLineMax);
 
 		for (int j = 0; j < BlockLineMax; j++)
 		{
