@@ -1,11 +1,4 @@
-/*************************************************************************
-> File Name: MapControl.cpp
-> Project Name: 2048 in GSM
-> Author: 이정빈 ,Wonho Ha aka Las
-> Purpose: Map Controller for Game Play
-> Created Time: 2018/05/29
-> Copyright (c) 2018, 이정빈
-*************************************************************************/
+//#include "stdafx.h"
 #include "../Includes/MapControl.h"
 #include "../Includes/Define.h"
 #include <iostream>
@@ -21,7 +14,7 @@ void MapControl::InputMap(Map * NewMap)
 	ptr1 = NewMap;
 }
 
-bool MapControl::AddBlock(int *BlockLine, int Count, int Direction)
+void MapControl::AddBlock(int *BlockLine, int Count, int Direction)
 {
 
 	if (Direction == 1) {
@@ -33,6 +26,7 @@ bool MapControl::AddBlock(int *BlockLine, int Count, int Direction)
 				if (BlockLine[i] != 0)
 				{
 					int Temp = BlockLine[i] + BlockLine[i + 1];
+					if (Temp == EndNumber) { PTR.EndGame(PlayerWin); }
 					BlockLine[i] = 0;
 					BlockLine[i + 1] = 0;
 					BlockLine[Input_place++] = Temp;
@@ -44,19 +38,20 @@ bool MapControl::AddBlock(int *BlockLine, int Count, int Direction)
 			{
 				if (BlockLine[i] != 0)
 				{
-					int Temp = BlockLine[i];
-					BlockLine[i] = 0;
-					BlockLine[Input_place] = Temp;
+					if (i != Input_place) 
+					{
+						int Temp = BlockLine[i];
+						BlockLine[i] = 0;
+						BlockLine[Input_place] = Temp;
+					}
 					Input_place++;
 				}
 				
 			}
 		}
-		return true; // 마지막 데이터가 있는 Index 위치;
 	}
 	else if (Direction == -1)
 	{
-		bool MoveCheck = false;
 		int Input_place = Count - 1;
 		for (int i = Count - 1; i >= 0; i--)
 		{
@@ -65,11 +60,11 @@ bool MapControl::AddBlock(int *BlockLine, int Count, int Direction)
 				if (BlockLine[i] != 0)
 				{
 					int Temp = BlockLine[i] + BlockLine[i - 1];
+					if (Temp == EndNumber) { PTR.EndGame(PlayerWin); }
 					BlockLine[i] = 0;
 					BlockLine[i - 1] = 0;
 					BlockLine[Input_place--] = Temp;
 					PTR.AddBlank(1);
-					MoveCheck = true;
 				}
 				i--;
 			}
@@ -77,13 +72,30 @@ bool MapControl::AddBlock(int *BlockLine, int Count, int Direction)
 			{
 				if (BlockLine[i] != 0)
 				{
-					int Temp = BlockLine[i];
-					BlockLine[i] = 0;
-					BlockLine[Input_place--] = Temp;
+					if (i != Input_place)
+					{
+						int Temp = BlockLine[i];
+						BlockLine[i] = 0;
+						BlockLine[Input_place] = Temp;
+					}
+					Input_place--;
 				}
 			}
 		}
 	}
+}
+
+bool MapControl::MoveChecking(int * BeforeMoving, int * AfterMoving, int Count)
+{
+	for (int i = 0; i < Count; i++)
+	{
+		if (BeforeMoving[i] != AfterMoving[i])
+		{
+			return true; //움직였음
+		}
+	}
+	
+	return false; // 안 움직임.
 }
 
 bool MapControl::PushKey(int Key)
@@ -94,9 +106,10 @@ bool MapControl::PushKey(int Key)
 		exit(1);
 	}
 
-	int BlockLineMax;
-	int KeyType;
-	int Direction;
+	int BlockLineMax; // 한 줄 길이
+	int KeyType; // 움직이는 방향이 가로인지, 세로인지 저장하는 변수
+	int Direction; // 방향을 저장한다. 1은 정방향이고 -1은 반대 방향이다.
+
 	if (Key / Horizontal == -1 || Key / Horizontal == 1)
 	{
 		BlockLineMax = HorizontalMax;
@@ -111,34 +124,44 @@ bool MapControl::PushKey(int Key)
 	}
 	else
 	{
-		cout << "잘못된 키값이 PushKey()함수에 전달되었습니다. Key : " << Key << endl;
+		cout << "잘못된 키값이 PushKey()함수에 전달되었습니다." << endl;
 		exit(1);
 	}
-	cout << endl << "KeyType : " << KeyType << " Direction : " << Direction << " BlockLineMax : " << BlockLineMax <<endl;
-	bool MoveCheck = false;
-	int BlockCount = 0;
-	int* BlockLine = (int*)malloc(sizeof(int)*BlockLineMax);
 
+	bool MoveCheck = false; //블럭이 움직였는데 체크하는 함수이다.
+	int BlockIndex = 0;
+	int* BlockLine = new int[BlockLineMax];  // 블럭 이동 상태를 저장한다.
+	int* BeforeBlock = new int[BlockLineMax]; //움직이기전 블럭 상태를 저장한다.
+	
 	for (int i = 0; i < (KeyType == Vertical ? HorizontalMax : VerticalMax); i++)
 	{
-		BlockCount = 0;
+		BlockIndex = 0; // 블럭 배열의 다음 데이터를 저장할 Index 값이다.
 		for (int j = 0; j < BlockLineMax; j++)
 		{
+			
 			if (KeyType == Vertical)
 			{
+				BeforeBlock[j] = PTR[i][j];
 				if (PTR[i][j] != 0) {
-					BlockLine[BlockCount++] = PTR[i][j];
+					BlockLine[BlockIndex++] = PTR[i][j];
 				}
 			}
 			else
 			{
-				if (PTR[j][i] != 0)
-					BlockLine[BlockCount++] = PTR[j][i];
+				BeforeBlock[j] = PTR[j][i];
+				if (PTR[j][i] != 0) {
+					BlockLine[BlockIndex++] = PTR[j][i];
+				}
 			}
 		}
-		for (int j = BlockCount; j < BlockLineMax; j++)
+		for (int j = BlockIndex; j < BlockLineMax; j++) // 남은 데이터 공간을 0으로 초기화 한다.
+		{
 			BlockLine[j] = 0;
-		MoveCheck = AddBlock(BlockLine, BlockLineMax, Direction);
+		}
+
+		AddBlock(BlockLine, BlockLineMax, Direction);
+		MoveCheck = MoveChecking(BeforeBlock, BlockLine, BlockLineMax);
+
 		for (int j = 0; j < BlockLineMax; j++)
 		{
 			if (KeyType == Vertical)
@@ -151,7 +174,10 @@ bool MapControl::PushKey(int Key)
 			}
 		}
 	}
-	free(BlockLine);
+
+	delete[] BlockLine;
+	delete[] BeforeBlock;
+
 	return MoveCheck;
 }
 

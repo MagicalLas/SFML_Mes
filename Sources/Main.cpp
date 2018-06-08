@@ -40,7 +40,6 @@ int main() {
 	sf::Text text;
 	std::vector<sf::Text> map_text;
 
-	
 	res.setFont("font.ttf", text);
 	text.setString(L"클릭하면 시작합니다.");
 	text.setCharacterSize(24);
@@ -54,9 +53,9 @@ int main() {
 	ScreenHelper.setMapTile(map_tile);
 	
 	
-	for (size_t i = 0; i < 5; i++)
+	for (size_t i = 0; i < MapSize; i++)
 	{
-		for (size_t j = 0; j < 5; j++)
+		for (size_t j = 0; j < MapSize; j++)
 		{
 			sf::Text t = *new(sf::Text);
 			res.setFont("font.ttf", t);
@@ -84,6 +83,7 @@ int main() {
 					MapController.PushKey(RightKey);
 					
 				MapController.CreateBlock();
+				map.CheckEndGame();
 				display.UpdateMap(map);
 				display.UpdateMapText(map_text);
 				display.UpdateMapTile(map_tile);

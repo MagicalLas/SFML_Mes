@@ -24,6 +24,7 @@ namespace Wonho_pp {
 			}
 			text.setFont(font);
 		};
+
 	private:
 		std::string ResourceRootPath;
 	};

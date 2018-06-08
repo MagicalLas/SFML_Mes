@@ -1,13 +1,8 @@
-/*************************************************************************
-> File Name: Define.h
-> Project Name: 2048 in GSM
-> Author: 이정빈 ,Wonho Ha aka Las
-> Purpose: Gsme Initialize
-> Created Time: 2018/06/04
-> Copyright (c) 2018, 이정빈
-*************************************************************************/
+//#include "stdafx.h"
+#pragma once
 #define VerticalMax 5 //세로
 #define HorizontalMax 5 //가로
+#define MapSize 5 //가로
 
 #define Vertical 1
 #define Horizontal 2
@@ -17,3 +12,9 @@
 
 #define LeftKey  (Vertical * 1)
 #define RightKey (Vertical * -1)
+
+#define EndNumber 4096
+
+#define PlayerWin 3
+#define PlayerLose 4
+#define GameContinue 6

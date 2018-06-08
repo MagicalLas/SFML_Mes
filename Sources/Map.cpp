@@ -1,11 +1,4 @@
-/*************************************************************************
-> File Name: Map.cpp
-> Project Name: 2048 in GSM
-> Author: ¿Ã¡§∫Û ,Wonho Ha aka Las
-> Purpose: Main Map Implimentation
-> Created Time: 2018/06/02
-> Copyright (c) 2018, ¿Ã¡§∫Û
-*************************************************************************/
+//#include "stdafx.h"
 #include "../Includes/Map.h"
 
 #include <iostream>
@@ -19,6 +12,12 @@ bool Map::IsFull()
 
 bool Map::CheckEndGame()
 {
+
+	if (GameState == PlayerWin || GameState == PlayerLose) return true;
+	if (Blank != 0) {
+		return false;
+	}
+	
 	for(int i = 0; i < VerticalMax; i++)
 	{ 
 		for (int j = 0; j < HorizontalMax-1; j++)
@@ -42,6 +41,7 @@ bool Map::CheckEndGame()
 		}
 	}
 
+	EndGame(PlayerLose);
 	return true;
 }
 
@@ -82,4 +82,18 @@ void Map::ShowMap()
 		}
 		cout << endl;
 	}
+}
+
+void Map::EndGame(int EndCode)
+{
+	if (EndCode == PlayerWin || EndCode == PlayerLose)
+	{
+		GameState = EndCode;
+	}
+	
+}
+
+int Map::ReturnState()
+{
+	return GameState;
 }

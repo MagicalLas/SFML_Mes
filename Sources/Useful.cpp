@@ -59,8 +59,8 @@ namespace Wonho_pp {
 
 	void Screen_Move::setMapTile(std::vector<sf::RectangleShape>& vec)
 	{
-		for (int i = 0; i < 5; i++) {
-			for (int j = 0; j < 5; j++) {
+		for (int i = 0; i < MapSize; i++) {
+			for (int j = 0; j < MapSize; j++) {
 				vec.push_back(setTile(j, i, sf::Color::Green));
 			}
 		}
@@ -69,8 +69,8 @@ namespace Wonho_pp {
 	
 
 	std::tuple<int, int> Screen_Move::PositionFunc(int x, int y) {
-		x = (map_x / 2) - (tile_x / 2) - (2 * tile_x) + (x * tile_x);
-		y = (map_y / 2) - (tile_y / 2) - (2 * tile_y) + (y * tile_y) + yBolder;
+		x = (map_x / 2) + (MapSize % 2)*(-(tile_x / 2)) - (2 * tile_x) + (x * tile_x);
+		y = (map_y / 2) + (MapSize % 2)*(-(tile_y / 2)) - (2 * tile_y) + (y * tile_y) + yBolder;
 		return { x, y };
 	};
 };
